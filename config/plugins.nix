@@ -19,6 +19,8 @@
       };
     };
 
+    nvim-colorizer.enable = true;
+    gitsigns.enable = true;
     barbecue.enable = true;
     indent-blankline.enable = true;
     lualine.enable = true;

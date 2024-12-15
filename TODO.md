@@ -6,16 +6,21 @@
 [X] Setup keybidings <-
     [] add more
 
-[] colorify
+[X] colorify
 
 [X] none-ls
     [] add more formatters, diagnostics 
 
-[] nvim tree with floating view
-[] lsp
-[] whichkey i guess ?
+[X] neotree with floating view
+    [] make few adjustments in size of window
+    [] chnage view format, unhide files and directories
+
+[X] whichkey i guess ?
+[X] lsp
 [] gitsigns
 
 [󰍳] overall cleanup
     [] imports
     [] plugins to seperate files
+
+[X] HARPOOON!
