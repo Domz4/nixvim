@@ -19,7 +19,7 @@
       };
     };
 
-    nvim-colorizer.enable = true;
+    colorizer.enable = true;
     gitsigns.enable = true;
     barbecue.enable = true;
     indent-blankline.enable = true;
