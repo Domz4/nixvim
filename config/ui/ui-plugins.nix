@@ -1,24 +1,24 @@
 { self, pkgs, ... }:
 let
-  nvui = pkgs.vimUtils.buildVimPlugin {
-    name = "nvchad-ui";
+  #  nvui = pkgs.vimUtils.buildVimPlugin {
+  #name = "nvchad-ui";
+  #src = pkgs.fetchFromGitHub {
+  # owner = "NvChad";
+  #repo = "ui";
+  # rev = "7905539f1e10f460811dc0db800355611f8a527a";
+  # hash = "sha256-qvheXNmJ0rDDGurf23sdP4XE8TrLAEFqYghXfe/rUgE=";
+  #};
+  #};
+
+  telescope-themes = pkgs.vimUtils.buildVimPlugin {
+    name = "telescope-themes";
     src = pkgs.fetchFromGitHub {
-      owner = "NvChad";
-      repo = "ui";
-      rev = "7905539f1e10f460811dc0db800355611f8a527a";
-      hash = "sha256-qvheXNmJ0rDDGurf23sdP4XE8TrLAEFqYghXfe/rUgE=";
+      owner = "andrewberty";
+      repo = "telescope-themes";
+      rev = "9b7c368b83b82b53c0a6e9e977f8329e5f1fe269";
+      hash = "sha256-L3XsAEtJdEkYaCZwDqS6+khgQy1JLWrZX2xntyBD968=";
     };
   };
-
-  #telescope-themes = pkgs.vimUtils.buildVimPlugin {
-  #  name = "telescope-themes";
-  #  src = pkgs.fetchFromGitHub {
-  #    owner = "andrewberty";
-  #    repo = "telescope-themes";
-  #    rev = "9b7c368b83b82b53c0a6e9e977f8329e5f1fe269";
-  #    hash = "sha256-L3XsAEtJdEkYaCZwDqS6+khgQy1JLWrZX2xntyBD968=";
-  #  };
-  #};
 in
 {
   extraPlugins =
@@ -64,7 +64,7 @@ in
     ++ [
       # base46
       # nvui
-      #telescope-themes
+      telescope-themes
     ];
 
 }
