@@ -8,6 +8,7 @@
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
   ];
+  extraOptions.checkAllLuaModules = false;
   plugins = {
     nvim-autopairs = {
       enable = true;
