@@ -10,15 +10,15 @@ let
     };
   };
 
-  telescope-themes = pkgs.vimUtils.buildVimPlugin {
-    name = "telescope-themes";
-    src = pkgs.fetchFromGitHub {
-      owner = "andrewberty";
-      repo = "telescope-themes";
-      rev = "9b7c368b83b82b53c0a6e9e977f8329e5f1fe269";
-      hash = "sha256-L3XsAEtJdEkYaCZwDqS6+khgQy1JLWrZX2xntyBD968=";
-    };
-  };
+  #telescope-themes = pkgs.vimUtils.buildVimPlugin {
+  #  name = "telescope-themes";
+  #  src = pkgs.fetchFromGitHub {
+  #    owner = "andrewberty";
+  #    repo = "telescope-themes";
+  #    rev = "9b7c368b83b82b53c0a6e9e977f8329e5f1fe269";
+  #    hash = "sha256-L3XsAEtJdEkYaCZwDqS6+khgQy1JLWrZX2xntyBD968=";
+  #  };
+  #};
 in
 {
   extraPlugins =
@@ -64,7 +64,7 @@ in
     ++ [
       # base46
       # nvui
-      telescope-themes
+      #telescope-themes
     ];
 
 }
