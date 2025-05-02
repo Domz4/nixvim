@@ -146,11 +146,11 @@
       action = "lua require(\"dap-python\").test_method()";
       options.desc = "Trigger debug tests";
     }
-    #{
-    #mode = "n";
-    #key = "<leader>th";
-    #action = "<cmd>Telescope themes<CR>";
-    #options.desc = "Change theme";
-    #}
+    {
+    mode = "n";
+    key = "<leader>th";
+    action = "<cmd>Telescope themes<CR>";
+    options.desc = "Change theme";
+    }
   ];
 }

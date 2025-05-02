@@ -64,7 +64,7 @@ in
     ++ [
       # base46
       # nvui
-      telescope-themes
+      #telescope-themes
     ];
 
 }
