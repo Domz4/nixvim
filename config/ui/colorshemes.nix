@@ -1,0 +1,44 @@
+{
+  self,
+  pkgs,
+  ...
+}: {
+  extraPlugins = with pkgs.vimPlugins; [
+    aurora
+    ayu-vim
+    adwaita-nvim
+    boo-colorscheme-nvim
+    bluloco-nvim
+    catppuccin-nvim
+    citruszest-nvim
+    cyberdream-nvim
+    dracula-nvim
+    doom-one-nvim
+    embark-vim
+    everforest
+    jellybeans-nvim
+    kanagawa-nvim
+    monokai-pro-nvim
+    miasma-nvim
+    midnight-nvim
+    night-owl-nvim
+    nightfox-nvim
+    nightly-nvim
+    nord-nvim
+    neovim-ayu
+    oceanic-next
+    oceanic-material
+    onenord-nvim
+    onedarkpro-nvim
+    oxocarbon-nvim
+    palenightfall-nvim
+    poimandres-nvim
+    rose-pine
+    sonokai
+    solarized-nvim
+    starrynight
+    tokyonight-nvim
+    vscode-nvim
+    vim-horizon
+  ];
+}

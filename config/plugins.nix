@@ -1,13 +1,15 @@
 {
   imports = [
-    ./ui/ui-plugins.nix
     ./plugins/cmp.nix
     ./plugins/harpoon.nix
     ./plugins/lspconfig.nix
     ./plugins/none-ls.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
+    ./plugins/huez.nix
+    ./ui/colorshemes.nix
   ];
+
   plugins = {
     nvim-autopairs = {
       enable = true;
@@ -27,11 +29,11 @@
     toggleterm.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
+    telescope.enable = true;
 
     neo-tree = {
       enable = true;
       window.position = "float";
     };
-
   };
 }
