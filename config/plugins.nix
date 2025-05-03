@@ -16,6 +16,7 @@ let
     "lazy"
     "fzf-lua"
     "better-escape"
+    # "bufferline"
   ];
 
   enablePlugins = lib.listToAttrs (
@@ -34,6 +35,7 @@ in
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./ui/colorshemes.nix
+    ./plugins/bufferline.nix
   ];
 
   # list of all plugins
@@ -53,4 +55,13 @@ in
       window.position = "float";
     };
   };
+  extraConfigLua = ''
+        	require("neo-tree").setup({
+        			filesystem = {
+        		filtered_items = {
+        			hide_hidden = false,
+        			},
+        		},
+        	})
+    	'';
 }
