@@ -1,4 +1,4 @@
-{ config, lib }:
+{ config, lib, ... }:
 {
   plugins = {
     bufferline = {
@@ -34,7 +34,6 @@
             persist_buffer_sort = true,
             separator_style = "none",
             always_show_bufferline = true,
-            -- enforce_regular_tabs = true,
           }
         '';
       };

@@ -1,5 +1,4 @@
 { lib, ... }:
-
 let
   plugin_list = [
     "cmp-buffer"
@@ -28,19 +27,21 @@ let
 in
 {
   imports = [
+    ./plugins/bufferline.nix
     ./plugins/cmp.nix
     ./plugins/harpoon.nix
     ./plugins/lspconfig.nix
     ./plugins/none-ls.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
+    ./plugins/luasnip.nix
     ./ui/colorshemes.nix
-    ./plugins/bufferline.nix
   ];
 
   # list of all plugins
 
   plugins = enablePlugins // {
+    cmp-ai.enable = true;
     nvim-autopairs = {
       enable = true;
       settings = {
@@ -56,12 +57,12 @@ in
     };
   };
   extraConfigLua = ''
-        	require("neo-tree").setup({
-        			filesystem = {
-        		filtered_items = {
-        			hide_hidden = false,
-        			},
-        		},
-        	})
-    	'';
+    require("neo-tree").setup({
+    		filesystem = {
+    	filtered_items = {
+    		hide_hidden = false,
+    		},
+    	},
+    })
+  '';
 }
