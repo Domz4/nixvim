@@ -20,6 +20,14 @@
       action = "<cmd>Telescope harpoon marks<CR>";
       options.desc = "harpoon marks";
     }
+
+    {
+      mode = "n";
+      key = "<leader>fw";
+      action = "<cmd>Telescope live_grep<CR>";
+      options.desc = "telescope live grep";
+    }
+
     {
       mode = "n";
       key = "<leader>y";
@@ -49,6 +57,12 @@
       key = "<leader>tx";
       action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>";
       options.desc = "Buffer Diagnostics (Trouble)";
+    }
+    {
+      mode = "n";
+      key = "<leader>y";
+      action = "<cmd>%y<CR>";
+      options.desc = "copy entire file";
     }
     # {
     #   mode = "n";
@@ -147,10 +161,24 @@
       options.desc = "Trigger debug tests";
     }
     {
-    mode = "n";
-    key = "<leader>th";
-    action = "<cmd>Telescope themes<CR>";
-    options.desc = "Change theme";
+      mode = "n";
+      key = "<leader>th";
+      action = "<cmd>FzfLua colorschemes<CR>";
+      options.desc = "Change theme";
+    }
+    {
+      mode = "n";
+      key = "<leader>/";
+      action = "gcc";
+      options.desc = "toggle comment";
+
+    }
+    {
+      mode = "v";
+      key = "<leader>/";
+      action = "gc";
+      options.desc = "toggle comment";
+
     }
   ];
 }

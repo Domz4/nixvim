@@ -2,7 +2,8 @@
   self,
   pkgs,
   ...
-}: {
+}:
+{
   extraPlugins = with pkgs.vimPlugins; [
     aurora
     ayu-vim
@@ -41,4 +42,17 @@
     vscode-nvim
     vim-horizon
   ];
+  #++ [
+  # Add huez directly here with proper configuration
+  #(pkgs.vimUtils.buildVimPlugin {
+  # name = "huez";
+  # src = pkgs.fetchFromGitHub {
+  #  owner = "vague2k";
+  # repo = "huez.nvim";
+  #  rev = "03e193e4aa02b5b3a439d0cc5edeb85a2f7b5415";
+  # hash = "sha256-BPzaPn0ZFKqIi7UgAF1gySyHbrJq5vvZheAUv/SfEs4=";
+  # };
+  #meta.noRequireCheck = true;
+  #})
+  #];
 }

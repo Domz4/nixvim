@@ -4,5 +4,4 @@
     ./mappings.nix
     ./options.nix
   ];
-  colorschemes.gruvbox.enable = true;
 }

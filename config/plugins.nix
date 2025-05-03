@@ -1,3 +1,30 @@
+{ lib, ... }:
+
+let
+  plugin_list = [
+    "cmp-buffer"
+    "cmp-nvim-lsp"
+    "barbecue"
+    "colorizer"
+    "gitsigns"
+    "indent-blankline"
+    "lualine"
+    "toggleterm"
+    "web-devicons"
+    "which-key"
+    "telescope"
+    "lazy"
+    "fzf-lua"
+    "better-escape"
+  ];
+
+  enablePlugins = lib.listToAttrs (
+    map (name: {
+      inherit name;
+      value.enable = true;
+    }) plugin_list
+  );
+in
 {
   imports = [
     ./plugins/cmp.nix
@@ -6,30 +33,20 @@
     ./plugins/none-ls.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
-    ./plugins/huez.nix
     ./ui/colorshemes.nix
   ];
 
-  plugins = {
+  # list of all plugins
+
+  plugins = enablePlugins // {
     nvim-autopairs = {
       enable = true;
       settings = {
         fast_wrap = {
-          end_key = "$";
           map = "<C-a>";
         };
       };
     };
-
-    colorizer.enable = true;
-    gitsigns.enable = true;
-    barbecue.enable = true;
-    indent-blankline.enable = true;
-    lualine.enable = true;
-    toggleterm.enable = true;
-    web-devicons.enable = true;
-    which-key.enable = true;
-    telescope.enable = true;
 
     neo-tree = {
       enable = true;
