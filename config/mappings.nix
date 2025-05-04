@@ -64,12 +64,6 @@
       action = "<cmd>%y<CR>";
       options.desc = "copy entire file";
     }
-    # {
-    #   mode = "n";
-    #   key = "<leader>ts";
-    #   action = "lua require(\"base46\").toggle_transparency()";
-    #   options.desc = "Toggle transparency";
-    # }
     {
       mode = "n";
       key = ";";
@@ -180,5 +174,60 @@
       options.desc = "toggle comment";
 
     }
+    {
+      mode = "n";
+      key = "<leader>zc";
+      action = "<cmd>CopilotChat<CR>";
+      options.desc = "Chat with Copilot";
+    }
+    {
+      mode = "v";
+      key = "<leader>ze";
+      action = "<cmd>CopilotChatExplain<CR>";
+      options.desc = "Explain Code";
+    }
+    {
+      mode = "v";
+      key = "<leader>zr";
+      action = "<cmd>CopilotChatReview<CR>";
+      options.desc = "Review Code";
+    }
+    {
+      mode = "v";
+      key = "<leader>zf";
+      action = "<cmd>CopilotChatFix<CR>";
+      options.desc = "Fix Code Issues";
+    }
+    {
+      mode = "v";
+      key = "<leader>zo";
+      action = "<cmd>CopilotChatOptimize<CR>";
+      options.desc = "Optimize Code";
+    }
+    {
+      mode = "v";
+      key = "<leader>zd";
+      action = "<cmd>CopilotChatDocs<CR>";
+      options.desc = "Generate Docs";
+    }
+    {
+      mode = "v";
+      key = "<leader>zt";
+      action = "<cmd>CopilotChatTests<CR>";
+      options.desc = "Generate Tests";
+    }
+    {
+      mode = "n";
+      key = "<leader>zm";
+      action = "<cmd>CopilotChatCommit<CR>";
+      options.desc = "Generate Commit Message";
+    }
+    {
+      mode = "v";
+      key = "<leader>zs";
+      action = "<cmd>CopilotChatCommit<CR>";
+      options.desc = "Generate Commit for Selection";
+    }
+
   ];
 }

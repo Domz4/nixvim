@@ -5,6 +5,7 @@
     enable = true;
     autoEnableSources = true;
     settings.sources = [
+      { name = "copilot"; }
       { name = "nvim_lsp"; }
       { name = "luasnip"; }
       { name = "buffer"; }
@@ -56,6 +57,7 @@
       cmp = {
         enable = true;
         menu = {
+          Copilot = " ";
           buffer = "";
           calc = "";
           cmdline = "";

@@ -8,4 +8,8 @@
     enable = true;
   };
 
+  plugins.copilot-chat = {
+    enable = true;
+  };
+
 }
