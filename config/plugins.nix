@@ -39,6 +39,7 @@ in
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/luasnip.nix
+    ./plugins/copilot.nix
     ./ui/colorshemes.nix
   ];
 
@@ -58,21 +59,7 @@ in
       enable = true;
       window.position = "float";
     };
-  };
 
-  cmp-ai = {
-    enable = true;
-    settings = {
-      max_lines = 1000;
-      provider = "HF";
-      notify = true;
-      notify_callback = ''
-                 function(msg)
-        	 vim.notify(msg)
-        	 end
-      '';
-      run_on_every_keystroke = true;
-    };
   };
 
   extraConfigLua = ''
