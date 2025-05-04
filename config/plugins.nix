@@ -3,6 +3,10 @@ let
   plugin_list = [
     "cmp-buffer"
     "cmp-nvim-lsp"
+    "cmp-nvim-ultisnips"
+    "cmp-nvim-lua"
+    "cmp-path"
+    "friendly-snippets"
     "barbecue"
     "colorizer"
     "gitsigns"
@@ -41,7 +45,6 @@ in
   # list of all plugins
 
   plugins = enablePlugins // {
-    cmp-ai.enable = true;
     nvim-autopairs = {
       enable = true;
       settings = {
@@ -56,6 +59,22 @@ in
       window.position = "float";
     };
   };
+
+  cmp-ai = {
+    enable = true;
+    settings = {
+      max_lines = 1000;
+      provider = "HF";
+      notify = true;
+      notify_callback = ''
+                 function(msg)
+        	 vim.notify(msg)
+        	 end
+      '';
+      run_on_every_keystroke = true;
+    };
+  };
+
   extraConfigLua = ''
     require("neo-tree").setup({
     		filesystem = {

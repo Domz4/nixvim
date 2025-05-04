@@ -4,7 +4,7 @@
 [X] Rewrite theamery plugin maybe  <- used telescope extension instead
 [X] Setup terminals
 [X] Setup keybidings <-
-    [] add more
+    [] add morel
 
 [X] colorify
 

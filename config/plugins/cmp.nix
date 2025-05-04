@@ -51,9 +51,6 @@
   };
 
   plugins = {
-    cmp-nvim-ultisnips.enable = true;
-    friendly-snippets.enable = true;
-    luasnip.enable = true;
     lspkind = {
       enable = true;
       cmp = {
